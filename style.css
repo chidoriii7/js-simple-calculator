@@ -1,0 +1,121 @@
+/* reset globale */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+
+#logo {
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* corpo calcolatrice */
+
+main {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.calculator {
+    border-radius: 10px;
+    width: 300px;
+
+    border: 1px solid #eee;
+
+    background: linear-gradient(270deg, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%);
+}
+
+#result-bar {
+    font-family: 'Seven Segment', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+
+    color: #09d297;
+    background-color: #000;
+
+    text-align: right;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.keys {
+    padding: 20px;
+
+    display: flex;
+}
+
+button {
+    font-family: "Michroma", sans-serif;
+    font-style: normal;
+
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 20px;
+    font-weight: 400;
+
+    border: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 2px solid #888;
+    border-left: 2px solid #888;
+    border-radius: 6px;
+    background-color: #bbb;
+    
+    cursor: pointer;
+}
+
+ button:active {
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-color: #888;
+    border-right-color: #888;
+    
+    /* il margin-top serve per evitare che on hover il pulsante si sposti  */
+    margin-top:2px;
+} 
+
+.operators button {
+    background-color: #77A8B0;
+    color: white;
+}
+
+button.orange {
+    background: #ff9f0a;
+    color: white;
+}
+
+ .numbers {
+    flex: 4;
+}
+
+ .operators {
+    flex: 1;
+}  
+
+.numbers button {
+    flex-basis: calc(33% - 10px);
+}
+
+.numbers button.large {
+    flex-basis: calc(66% - 10px);
+} 
